@@ -3,21 +3,129 @@
 <head>
     <title>Janvi Beauty Salon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+        }
+
+        header {
+            background: linear-gradient(black, #333);
+            color: gold;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            color: white;
+        }
+
+        .btn {
+            background: gold;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
 </head>
-<body style="font-family:Arial; text-align:center; background:#f9f9f9;">
 
-<h1>Janvi Beauty Salon</h1>
-<p>Enhancing Your Natural Beauty</p>
+<body>
 
-<h2>Services & Prices</h2>
-<p>Threading – ₹40</p>
-<p>Forehead – ₹30</p>
-<p>Facial – ₹999</p>
-<p>Pedicure – ₹499</p>
-<p>Manicure – ₹399</p>
+<header>
+    <h1>Janvi Beauty Salon</h1>
+    <p>Enhancing Your Natural Beauty</p>
+    <button class="btn" onclick="callNow()">Book Appointment</button>
+</header>
 
-<h2>Contact</h2>
-<p>📞 9648469543</p>
+<div class="section">
+    <h2>Our Services</h2>
+
+    <div class="services">
+        <div class="card">
+            <h3>Threading</h3>
+            <p class="price">₹40</p>
+        </div>
+
+        <div class="card">
+            <h3>Forehead</h3>
+            <p class="price">₹30</p>
+        </div>
+
+        <div class="card">
+            <h3>Facial</h3>
+            <p class="price">₹999</p>
+        </div>
+
+        <div class="card">
+            <h3>Pedicure</h3>
+            <p class="price">₹499</p>
+        </div>
+
+        <div class="card">
+            <h3>Manicure</h3>
+            <p class="price">₹399</p>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Contact Us</h2>
+    <p>📞 9648469543</p>
+    <button class="btn" onclick="whatsapp()">Book on WhatsApp</button>
+</div>
+
+<footer>
+    <p>© 2026 Janvi Beauty Salon</p>
+</footer>
+
+<script>
+function callNow() {
+    window.location.href = "tel:9648469543";
+}
+
+function whatsapp() {
+    window.open("https://wa.me/919648469543");
+}
+</script>
 
 </body>
-</html>
+    </html>
